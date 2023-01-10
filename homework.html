@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomeWorkPage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230110204153">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+			</div>
+		</header>
+		<main class="page">
+			<section class="lesson_22">
+				<header class="lesson-22__header header">
+					<div class="header__container">
+						<h1>Урок 22</h1>
+					</div>
+				</header>
+				<div class="lesson_22__container">
+
+					<h2>Основи синтаксису</h2>
+					<h3>Який варіант видасть помилку</h3>
+					<ol>
+						<li>console.log('Учим JS')</li>
+						<li>console.log('JS') <br> console.log('Учим')</li>
+						<li class="wrong">console.log('Учим') console.log('JS') <br> <span>*відсутня ; </span></li>
+						<li class="wrong">console.log('Учим); <br>console.log('JS'); <br> <span>*незакриті лапки</span></li>
+					</ol>
+					<h2>Змінні</h2>
+					<h3>Ім'я змінної для зберігання кольору очей користувача: <mark>userEyeColor</mark></h3>
+					let user;<br>let userName = "Вася";<br>user = userName;<br>console.log(user);
+					<h3>Вибрати невірні варіанти <span class="wrong-item"> - невірний варіант</span> <span class="incorrect-item"> - некоректний запис</span></h3>
+					<ol>
+						<li class="wrong">let user = 'Вася' let age = 36 <br> <span>*відсутня ; </span></li>
+						<li class="not-correct">let myage = 36;<br> <span>*не дотримано стиль lowerCamelCase </span></li>
+						<li>const BLOCK_SIZE = 14 + 50;</li>
+						<li>const BLOCK_HEIGHT = 100;</li>
+						<li class="not-correct">if(true){var size = 15; <br> } <br> console.log(size);<br> <span>*нелогічне
+								використання умови </span></li>
+					</ol>
+					<h2>Типи даних</h2>
+					<h3>Який з варіантів невірний</h3>
+					<ol>
+						<li class="wrong">let userAge = 36;<br> let userInfo = "Фрилансер ${userAge}";
+							<br> <span>*звернення до змінної може бути лише в записі зі зворотними лапками </span>
+						</li>
+						<li class="wrong">let userAge = 145 / 0; <br>//Поверне значення
+							NAN<br>console.log(userAge);<br><span>*Поверне значення Infinity </span></li>
+						<li class="wrong">let userName;<br>//Поверне тип даних NULL <br>console.log(typeof
+							userName);<br><span>*Поверне значення undefined </span></li>
+						<li>let userSize = "45" / "8";<br>//Повернеться тип даних number<br>console.log(typeof userSize);</li>
+					</ol>
+				</div>
+			</section>
+			<section class="lesson_23">
+				<header class="lesson-22__header header">
+					<div class="header__container">
+						<h1>Урок 23</h1>
+					</div>
+				</header>
+				<div class="lesson_23__container">
+					<h2>Оператори</h2>
+					<h3>Який з варіантів невірний</h3>
+					<ol>
+						<li class="wrong">console.log('35' + - "22");<br>//Поверне значення
+							13<br><span>*Повернеться рядок 35-22 </span></li>
+						<li>console.log('35' * "22");<br>//Поверне значення
+							770</li>
+						<li class="wrong">console.log('558' > 22++);<br>//Поверне значення
+							true<br><span>*Помилка, адже інкремент можна застосовувати тільки до змінної </span></li>
+						<li class="wrong">let userCounter = 0;<br>
+							let users = userCounter++;<br>
+							console.log(users);<br>//Поверне значення
+							1<br><span>*Помилка, адже інкремент в постфіксному форматі і виконає збільшення змінної після
+								присвоєння </span></li>
+						<li class="wrong">console.log(!false && 11 || 18 && !'');//Поверне значення
+							18<br><span>*Поверне значення 11 </span></li>
+						<li>let name = 0;<br>
+							console.log(name ?? "Без имени") <br><span>Поверне 0</span></li>
+					</ol>
+					<h2>IF ELSE</h2>
+					<h3>Який з варіантів невірний</h3>
+					<ol>
+						<li class="wrong">if(1 === "1"){<br>
+							console.log("Правда");<br>
+							}else console.log("Брехня");<br><span>Поверне: Брехня</span>
+						</li>
+						<li>
+							if(5 == "5"){<br>
+							console.log("Правда");<br>
+							} else console.log("Брехня");
+							<br><span>Поверне: Правда</span>
+						</li>
+						<li>
+							let message = (92 > "11" && 58 < 100) ? "Правда" : "Брехня" ;<br>
+								console.log(message);
+								<br><span>Поверне: Правда</span>
+						</li>
+						<li>if(0){<br>
+							console.log("Брехня");<br>
+							}else if(" "){<br>
+							console.log("Правда");}
+							<br><span>Поверне: Правда</span>
+						</li>
+					</ol>
+					<h2>FOR WHILE</h2>
+					<h3>Виконати завдання</h3>
+					<ol>
+						<li><span>Вивести в консоль числа від 1 до 5</span><br>
+							for(let i = 1; i < 6; i++){<br>
+								console.log(i);<br>
+								}
+						</li>
+						<li>
+							let num = 8;
+							<br>while(num){
+							<br>console.log(num);
+							<br>num--;
+							<br>}
+							<br><span>Останнім поверне: 1</span>
+						</li>
+						<li>
+							for(let num = 0; num < 2; num++){ <br>console.log(`Число: ${num}`);
+								<br>}
+								<br><span>Переробити з циклом while</span>
+								<br>let num = 0;
+								<br>while(num < 2){ <br> console.log(`Число: ${num}`);
+									<br> num++;
+									<br>}
+						</li>
+						<li>
+							<span>Припинити роботу циклу 1, коли size == 1 </span>
+							For1: for(let num = 0; num < 2; num++){ <br> for(let size = 0; size < 3; size++){ <br> if(size ==
+									1) break For1;
+									<br> console.log(size);
+									<br>}
+									<br>}
+						</li>
+					</ol>
+					<h2>ЧИСЛА</h2>
+					<h3>Виконати завдання</h3>
+					<ol>
+						<li><span>Отримати вірне значення округлення</span><br>
+							let numOne = Math.round((1.005 + Number.EPSILON) * 100) / 100;
+							<br>console.log(numOne);
+						</li>
+						<li>
+							let value = "135.58px";
+							<br><span>Отримати число 135,58 з рядка</span>
+							<br>console.log(parseFloat(value));
+						</li>
+						<li>
+							<br><span>Побудувати правильне умовне розгалудження</span>
+							let value1 = 58 + "Фрілансер";
+							<br>if(isNaN(value1)) {
+							<br>console.log("Результат виразу NaN");
+							<br>}
+						</li>
+						<li>
+							<span>Знайти максимальне число </span>
+							<br>console.log(Math.max(10, 58, 39, -150, 0));
+						</li>
+						<li>
+							<span>Заокруглити число 58,858 до числа 58 </span>
+							<br>console.log(Math.floor(58.858));
+						</li>
+					</ol>
+					<h2>РЯДКИ</h2>
+					<h3>Виконати завдання</h3>
+					<ol>
+						<li><span>Чи правильний запис?</span><br>
+							<br>let fls = "фрилансер";
+							<br>let text = `Привет! Я ${fls}`;
+							<br>console.log(text);
+							<br><span>Отримуємо рядок: Привет! Я фрилансер</span>
+						</li>
+						<li>
+							<span>Отримати символ "н" з рядку</span>
+							<br>let text = 'фрилансер';
+							<br>console.log(text[5]);
+						</li>
+						<li>
+							<span>Чи правильний запис?</span>
+							<br> let text = 123 +"456";
+							<br>//Очікуємо 579
+							<br>console.log(text);
+							<br><span>Неправильно, адже отримаємо рядок 123456</span>
+						</li>
+						<li>
+							<span>Отримати рядок у верхньому регістрі </span>
+							<br>let text = 'фрилансер';
+							<br>console.log(text.toUpperCase());
+						</li>
+						<li>
+							<span>Отримати рядок "лан" </span>
+							<br>let text = 'фрилансер';
+							<br>console.log(text.slice(3, 6));
+						</li>
+						<li>
+							<span>Вірно чи брехня </span>
+							<br>let text = 'фрилансер';
+							<br>console.log(text.includes('лан', 4));
+							<span>НЕвірно! Вірним буде text.includes('лан', 3) </span>
+						</li>
+					</ol>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20230110204153">
+
+	</script>
+</body>
+
+</html>
